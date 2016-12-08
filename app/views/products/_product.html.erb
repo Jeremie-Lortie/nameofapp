@@ -1,0 +1,15 @@
+<tr>
+  <td><%= product.name %></td>
+  <td><%= product.description %></td>
+  <td><%= product.image_url %></td>
+  <div class="col-md-4 col-sm-6 col-xs-12" id="bike">
+    <h3><%= product.name %></h3>
+     <%= image_tag(product.image_url, class: "img-responsive") %>
+    <p><%= product.description %></p>
+     <p><%= product.colour %></p>
+     <strong id="price"><%= product.price %> €</strong><br> 
+      <td><%= link_to 'Show', product %></td>
+      <td><%= link_to 'Edit', edit_product_path(product) %></td>
+      <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure' } %></td>
+    </tr>
+</div><!-- /col -->
