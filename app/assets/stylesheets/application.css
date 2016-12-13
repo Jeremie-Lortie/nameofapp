@@ -26,6 +26,9 @@ body {
 .navbar-nav {
 	padding-left: 20px;
 }
+.nav .navbar-nav .navbar-right {
+	float: right;
+}
 
 .my-image {
 	margin-top: -20px;

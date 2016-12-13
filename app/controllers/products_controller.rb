@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.where("name Like ?", "%#{search_term}%")
+      @products = Product.where("name ILike ?", "%#{search_term}%")
     else
       @products = Product.all
     end
