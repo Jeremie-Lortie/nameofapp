@@ -26,8 +26,10 @@ body {
 .navbar-nav {
 	padding-left: 20px;
 }
-.nav .navbar-nav .navbar-right {
+.navbar-right {
 	float: right;
+	padding-right: 70px;
+	display: inline;
 }
 
 .my-image {

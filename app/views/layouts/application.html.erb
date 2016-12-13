@@ -53,7 +53,7 @@
         </li>
       </ul>
      
-      <%= form_tag("/products", :method => "get", id: "search-form", html: {class: 'nav navbar-nav navbar-right'}) do %>
+      <%= form_tag("/products", :method => "get", id: "search-form", :class => 'nav navbar-nav navbar-right') do %>
         <%= text_field_tag :q, params[:search], placeholder: "Search", class: "form-control" %>
         <%= submit_tag "Search", :class => 'btn btn-default'%>
       <% end %>
