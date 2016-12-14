@@ -28,8 +28,12 @@ body {
 }
 .navbar-right {
 	float: right;
-	padding-right: 70px;
+	padding-right: 30px;
 	display: inline;
+	padding-top: 10px;
+}
+.form-inline {
+	height: 31px;
 }
 
 .my-image {

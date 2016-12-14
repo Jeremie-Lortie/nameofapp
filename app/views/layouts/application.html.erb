@@ -54,7 +54,7 @@
       </ul>
      
       <%= form_tag("/products", :method => "get", id: "search-form", :class => 'nav navbar-nav navbar-right') do %>
-        <%= text_field_tag :q, params[:search], placeholder: "Search", class: "form-control" %>
+        <%= text_field_tag :q, params[:search], placeholder: "Search", class: "form-inline" %>
         <%= submit_tag "Search", :class => 'btn btn-default'%>
       <% end %>
     </div><!-- /.navbar-collapse -->
