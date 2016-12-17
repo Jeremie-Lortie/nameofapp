@@ -52,6 +52,15 @@
           </ul>
         </li>
       </ul>
+      <ul class="nav pull-right">
+        <li>
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+        <% end %>
+        </li>
+      </ul>
      
       <%= form_tag("/products", :method => "get", id: "search-form", :class => 'nav navbar-nav navbar-right') do %>
         <%= text_field_tag :q, params[:search], placeholder: "Search", class: "form-inline" %>
@@ -61,6 +70,8 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= yield %>
 
 
