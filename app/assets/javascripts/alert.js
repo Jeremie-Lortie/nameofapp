@@ -1,1 +1,1 @@
-$("#alert").delay( 800 ).fadeOut( "slow" );
+$("alert").delay( 800 ).fadeOut( "slow" );
