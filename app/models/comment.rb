@@ -1,4 +1,4 @@
-class Comment < ActiveRecord::Base
+class Comment < ApplicationRecord
 	validates :body, presence: true
   validates :user, presence: true
   validates :product, presence: true
