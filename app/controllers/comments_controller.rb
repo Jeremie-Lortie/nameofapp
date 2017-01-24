@@ -16,9 +16,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    product = @comment.product
+    @comment.destroy
+    redirect_to product
   end
-
-  Post.paginate(:page => params[:page], :per_page => 3)
 
 private
 
