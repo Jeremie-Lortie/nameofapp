@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development, :test do
@@ -63,3 +64,4 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.1'
 
 gem 'rails-controller-testing'
+
