@@ -3,6 +3,14 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :comments
 
+  def self.search(search_term)
+  	if Rails.env == 'production'  
+    	where("name ILike ?", "%#{search_term}%")
+    else  
+			where("name Like ?", "%#{search_term}%")
+    end
+  end
+
   def highest_rating_comment
   	comments.rating_desc.first
 	end
