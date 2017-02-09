@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
   def contact_form(email, name, message)
   @message = message
-    mail(:from => email,
+    mail(:from => 'Bike Shop',
         :to => 'your-email@example.com',
         :subject => "A new contact form message from #{name}")
   end
@@ -13,5 +13,13 @@ class UserMailer < ApplicationMailer
   mail( :to => user.email,
         :subject => "Welcome to #{@appname}!")
 	end
+
+  def paid_success(user, product)
+    @user = user
+    @product = product
+    mail( :from => 'Bike Shop',
+          :to => user.email,
+          :subject => "Confirmation of Order and Payment")
+  end
 	
 end
