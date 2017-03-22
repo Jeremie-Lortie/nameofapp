@@ -1,29 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<div class="row" id="listing">
+  <div class="col-md-8 col-xs-10">
+    <h1>Listing Products</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Colour</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Image url</th>
+          <th>Colour</th>
+          <th>Price</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-<div class="container-fluid">
-  <div class="row">
-    <%= render @products %>
-  </tbody>
- </table>
+      <tbody>
+    <div class="container-fluid">
+      <div class="row">
+        <%= render @products %>
+      </tbody>
+     </table>
+      </div>
+     </div>
+
+    <br>
+
+    <%= link_to 'New Product', new_product_path %>
   </div>
- </div>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+</div>
 

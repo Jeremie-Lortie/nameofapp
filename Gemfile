@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '>= 5.0.0.rc2', '< 5.1'
 
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
@@ -35,6 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,3 +58,12 @@ group :production do
 end
 
 gem 'devise'
+
+gem 'cancancan', '~> 1.10'
+
+gem 'will_paginate', '~> 3.1.1'
+
+gem 'rails-controller-testing'
+
+gem 'stripe'
+

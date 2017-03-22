@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
+  
+  resources :products do
+    resources :comments
+  end
+  
   resources :users
-  resources :products
+  
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -14,7 +20,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-root 'static_pages#landing_page'
+	root 'static_pages#landing_page'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
