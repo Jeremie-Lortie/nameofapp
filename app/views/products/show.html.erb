@@ -21,6 +21,12 @@
               <%= form_tag "/payments/create" do %>
                 <%= render partial: "shared/stripe_checkout_button" %>
               <% end %>
+              <h6>  
+                Views:
+                <span class="badge">
+                  <%= @product.views %>
+                </span>
+              </h6>  
             </div>
           </div>
         </div>
