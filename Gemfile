@@ -69,5 +69,7 @@ gem 'stripe'
 
 gem 'dalli'
 
+gem 'redis-rails'
+
 
 
