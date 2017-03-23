@@ -2,7 +2,7 @@
     <div class="row" data-product-id="<%= @product.id %>">
       <% cache @product do %>
       <div class="col-md-7 col-xs-12">
-        <%= image_tag(@product.image_url, class: "img-responsive detail img-zoom") %>
+        <%= image_tag(@product.image_url, width:"350", class: "img-responsive detail img-zoom", data_zoom_image: "@product.image_url") %>
  
         <% if signed_in? && current_user.admin? %>
         <%= link_to 'Edit', edit_product_path(@product) %> |
@@ -28,36 +28,6 @@
       <% end %>
     </div>
     
-
-<<<<<<< HEAD
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_url, width:"350", class: "img-zoom", data_zoom_image: "@product.image_url") %>
-</p>
-
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
-=======
     <div class="row">
       <div class="col-md-8 col-xs-12">
           <h4>User Ratings</h4>
@@ -91,4 +61,4 @@
     </div>
  
 </div><!-- /container -->
->>>>>>> 7fefd91543d313327ce9c9b61b2122fed70b7752
+
