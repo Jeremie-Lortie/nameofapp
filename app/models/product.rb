@@ -20,7 +20,7 @@ class Product < ApplicationRecord
   end
 
   def viewed!
-    $redis.inc("product:#{id}") # this is equivalent to 'INC product:1'
+    $redis.incr("product:#{id}") # this is equivalent to 'INC product:1'
   end
 
 
