@@ -52,7 +52,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'puma'
   
 end
 
@@ -73,6 +72,8 @@ gem 'stripe'
 gem 'dalli'
 
 gem 'redis-rails'
+
+gem 'puma'
 
 
 
