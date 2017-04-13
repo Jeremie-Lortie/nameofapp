@@ -1,6 +1,5 @@
 <div class="container product">
     <div class="row" data-product-id="<%= @product.id %>">
-      <% cache @product do %>
       <div class="col-md-7 col-xs-12">
         <%= image_tag(@product.image_url, width:"350", class: "img-responsive detail img-zoom", data_zoom_image: "@product.image_url") %>
  
@@ -27,7 +26,6 @@
           </div>
         </div>
       </div>
-      <% end %>
     </div>
     
     <div class="row" data-product-id="<%= @product.id %>">
