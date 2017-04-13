@@ -18,10 +18,12 @@
               <h5><%= @product.colour %></h5>
               <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
               <p><%= @product.description %></p>
-              <% if current_user && current_user.admin? %> 
+              <% if user_signed_in? %> 
                 <%= form_tag "/payments/create" do %>
                   <%= render partial: "shared/stripe_checkout_button" %>
-                <% end %> 
+                <% end %>
+              <% else %>
+                <small>To buy this product, please sign in.</small>
               <% end %> 
             </div>
           </div>
