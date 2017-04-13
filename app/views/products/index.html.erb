@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row" id="listing">
+<% cache(cache_key_for_products) do %>
+  <%= render @products %>
+<% end %>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+
+<!--<div class="row" id="listing">
   <div class="col-md-8 col-xs-10">
     <h1>Listing Products</h1>
 
@@ -31,5 +39,5 @@
 
     <%= link_to 'New Product', new_product_path %>
   </div>
-</div>
+</div> -->
 
