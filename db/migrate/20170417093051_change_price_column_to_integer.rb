@@ -1,5 +1,5 @@
 class ChangePriceColumnToInteger < ActiveRecord::Migration[5.0]
   def change
-    change_column :products, :price_in_cents, :integer,
+    change_column :products, :price, :integer
   end
 end
